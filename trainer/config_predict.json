@@ -1,0 +1,11 @@
+{
+    "model": {
+	    "attn_score_type":"add", 
+	    "pairwise_type":"cov",
+	    
+	    "weighting_schema":"spe",
+	    "d_fc":512,
+	    "d_model":512,
+	    "num_heads":4
+    }
+}

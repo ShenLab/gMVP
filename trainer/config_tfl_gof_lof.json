@@ -1,0 +1,37 @@
+{
+    "train": {
+	"opt":"adam",
+	
+	"batch_size":32,
+
+        "learning_rate": 1e-3,
+	"end_learning_rate":1e-4,
+	
+	"warmup_steps":200,
+	"decay_steps":2000,
+	
+	"weight_decay_rate":1e-4,
+
+        "epoch": 512,
+
+        "seed": 2020,
+        "train_dir": "./res"
+    },
+    "model": {
+	    "dropout_rate":0.4,
+	    "attn_score_type":"add", 
+	    "pairwise_type":"cov",
+	    
+	    "weighting_schema":"spe",
+	    "d_fc":512,
+	    "d_model":512,
+	    "num_heads":4,
+	    "rate":0.0,
+	    "maximum_position_encoding":1024
+    },
+    "input": {
+	    "train":"../dataset/tf/2021_64_v20/training_lof_gof_annotated_train_5fold.tfrec",
+	    "validate":"../dataset/tf/2021_64_v20/training_lof_gof_annotated_validate_5fold.tfrec",
+	    "test":"../dataset/tf/2021_64_v20/testing_lof_gof_annotated.tfrec"
+    }
+}

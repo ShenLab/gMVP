@@ -1,0 +1,57 @@
+{
+    "train": {
+	"opt":"adam",
+	"model_type":"attention",
+	"#model_type":"dnn",
+
+	
+	"batch_size":512,
+
+        "learning_rate": 1e-3,
+	"end_learning_rate":1e-4,
+	
+	"warmup_steps":100,
+	"decay_steps":2000,
+	
+	"weight_decay_rate":1e-4,
+
+        "epoch": 512,
+
+        "seed": 2020,
+        "train_dir": "./res"
+    },
+    "model": {
+	    "dropout_rate":0.4,
+	    "attn_score_type":"add", 
+	    "pairwise_type":"cov",
+	    
+	    "weighting_schema":"spe",
+	    "d_fc":512,
+	    "d_model":512,
+	    "num_heads":4,
+	    "rate":0.0,
+	    "maximum_position_encoding":1024
+    },
+
+    "input": {
+	"base_dir":"../dataset/tf/2021_64_v20",
+        "train": "train_r0",
+        "test": {
+	    "Cancer_DiscovEHR2": "Cancer_DiscovEHR2",
+	    "Cancer_Hotspot_2times_DiscovEHR": "Cancer_Hotspot_2times_DiscovEHR",
+	    "Cancer_Hotspot_2times_DiscovEHR_v2": "Cancer_Hotspot_2times_DiscovEHR_v2",
+	    "Cancer_Hotspot_2times_DiscovEHR_v4": "Cancer_Hotspot_2times_DiscovEHR_v4",
+            "TP53": "TP53",
+            "PTEN": "PTEN",
+	    "BRCA1": "BRCA1",
+	    "MSH2":"MSH2"
+        },
+        "denovo": {
+	    "ASD_All": "ASD_Xueya_NoDup",
+            "ASD": "ASD",
+            "CHD": "CHD",
+	    "DDD": "DDD",
+            "Control": "Control"
+        }
+    }
+}
