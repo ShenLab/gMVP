@@ -16,6 +16,6 @@ We implemented gMVP using Tensorflow2. The following libraries are required: ten
 
 
 ### Citation
-Predicting functional effect of missense variants using graph attention neural networks.  
-Haicang Zhang, Michelle S Xu, Wendy K Chung, Yufeng Shen  
-bioRxiv 2021.04.22.441037; doi: https://doi.org/10.1101/2021.04.22.441037
+ Haicang Zhang, Michelle S Xu, Xiao Fan, Wendy K Chung, Yufeng Shen, (2022) Predicting functional effect of missense variants using graph attention neural networks. Nature Machine Intelligence, doi: 10.1038/s42256-022-00561-w  
+
+A preprint is available on bioRxiv: https://doi.org/10.1101/2021.04.22.441037
